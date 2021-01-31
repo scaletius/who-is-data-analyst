@@ -1,8 +1,12 @@
 name: mdlint
-on: [push]
+
+on:
+  push:
+    branches: [ main ]
+
 jobs:
   mdlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: 
+      - uses: logansquirel/action-markdownlint@v0.1
       - run: mdl docs/ -r ~MD013
