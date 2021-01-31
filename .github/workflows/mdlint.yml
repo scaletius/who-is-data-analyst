@@ -8,6 +8,7 @@ jobs:
   markdown-lint:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: sudo gem install chef-utils -v 16.6.14
       - run: sudo gem install mdl
       - run: mdl $GITHUB_WORKSPACE/docs -r ~MD013
